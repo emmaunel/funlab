@@ -4,5 +4,7 @@ set list=INSTRUCTOR AUTO11 AUTO12 AUTO21 AUTO22 AUTO31 AUTO32 AUTO41 AUTO42 AUTO
 for %%a in (%list%) do (
 	Powershell.exe -Command "msg * /SERVER:%%a Hello, Friend"
 	Powershell.exe -Command "msg * /SERVER:%%a HI, I hope you like you new wallpaper"
+	sp 'HKCU:Control Panel\Desktop' -name WallPaper -value 'C:\Users\student\Desktop\b.jpg'// not working
+	RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters 1,True //Not working at the moment
 )
 pause
