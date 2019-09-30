@@ -6,9 +6,9 @@ psexec.exe \\* iwr -Uri https://raw.githubusercontent.com/emmaunel/funlab/master
 sleep 10
 iwr -Uri https://raw.githubusercontent.com/emmaunel/funlab/master/new.jpg -OutFile C:\Users\student\Desktop\new.bmp # have to use psexec for remote execution
 sleep 10
-msg * /SERVER:%%a Hello, Friend
+msg * /SERVER:$PC Hello, Friend
 sleep 5
-msg * /SERVER:%%a HI, I hope you like you new wallpaper
+msg * /SERVER:$PC HI, I hope you like you new wallpaper
 sleep 5
 sp 'HKCU:Control Panel\Desktop' -name WallPaper -value 'C:\Users\student\Desktop\new.bmp'# To change wallpaper from cmd, it has to be bmp
 RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters 1,True #Now works
